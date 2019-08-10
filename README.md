@@ -1,2 +1,2 @@
 # lisp-adouble
-Simple Lips Adouble Implementation to made Automatic Diferentation (AD)
+Simple Lisp Adouble Implementation to made Automatic Diferentation (AD)
