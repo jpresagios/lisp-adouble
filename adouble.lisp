@@ -9,3 +9,10 @@
 (shadow '-)
 (shadow '+)
 ;;;}}}
+
+
+;;;{{{ Added adouble class
+(defclass adouble ()
+  ((value :accessor value :initarg :value)
+   (dot :accessor dot :initarg :dot)))
+;;;}}}
