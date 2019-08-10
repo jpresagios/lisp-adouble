@@ -59,3 +59,46 @@
     (setf (dot r) 0)
     (+ r y)))
 ;;;}}}
+
+
+;;;{{{ Overload operator -
+(defmethod - ((x adouble) (y adouble))
+  (let* (r)
+    
+    (setf r (make-instance 'adouble))
+    (setf (value r) (- (value x) (value y)))
+    (setf (dot r) (- (dot x) (dot y)))
+    r))
+
+(defmethod - ((x adouble) (y integer))
+  (let* (r)
+    
+    (setf r (make-instance 'adouble))
+    (setf (value r) y)
+    (setf (dot r) 0)
+    (- x r)))
+
+(defmethod - ((x adouble) (y float))
+  (let* (r)
+    
+    (setf r (make-instance 'adouble))
+    (setf (value r) y)
+    (setf (dot r) 0)
+    (- x r)))
+
+(defmethod - ((x integer) (y adouble))
+  (let* (r)
+    
+    (setf r (make-instance 'adouble))
+    (setf (value r) x)
+    (setf (dot r) 0)
+    (- r y)))
+
+(defmethod - ((x float) (y adouble))
+  (let* (r)
+    
+    (setf r (make-instance 'adouble))
+    (setf (value r) x)
+    (setf (dot r) 0)
+    (- r y)))
+;;;}}}
