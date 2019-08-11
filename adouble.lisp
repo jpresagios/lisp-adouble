@@ -11,6 +11,17 @@
 ;;;}}}
 
 
+;;;{{{ Overloads for the passive types
+(defmethod / ((x t) (y t))
+  (cl:/ x y))
+(defmethod * ((x t) (y t))
+  (cl:* x y))
+(defmethod - ((x t) (y t))
+  (cl:- x y))
+(defmethod + ((x t) (y t))
+  (cl:+ x y))
+;;;}}}
+
 ;;;{{{ Added adouble class
 (defclass adouble ()
   ((value :accessor value :initarg :value)
