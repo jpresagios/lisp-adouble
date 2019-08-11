@@ -22,6 +22,8 @@
   (cl:+ x y))
 ;;;}}}
 
+
+
 ;;;{{{ Added adouble class
 (defclass adouble ()
   ((value :accessor value :initarg :value)
